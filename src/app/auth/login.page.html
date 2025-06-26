@@ -1,0 +1,28 @@
+<section class="login-container">
+  <h1>Iniciar sesión</h1>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <input formControlName="email" type="email" placeholder="Correo" />
+
+    <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+      <small *ngIf="loginForm.get('email')?.errors?.['required']">Correo es obligatorio</small>
+      <small *ngIf="loginForm.get('email')?.errors?.['email']">Correo NO es válido</small>
+    </div>
+
+    <input formControlName="password" type="password" placeholder="contraseña" />
+
+    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+      <small>Contraseña obligatoria</small>
+    </div>
+
+
+  <button type="submit">Ingresar</button>
+</form>
+
+<p *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</p>
+
+
+</section>

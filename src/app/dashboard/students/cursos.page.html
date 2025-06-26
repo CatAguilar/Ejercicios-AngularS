@@ -1,0 +1,14 @@
+<div>
+  <h2>Lista de Cursos del Estudiante</h2>
+</div>
+
+<section class="tarjetas-cursos">
+
+  <div *ngFor="let curso of cursos" class="tarjeta" style="border: 1px solid rgb(141, 127, 217); padding: 1rem; margin-top: 1rem;">
+    <h3>{{curso.name}}</h3>
+    <h4>{{curso.teacher}}</h4>
+    <p>{{curso.description}}</p>
+    <a [routerLink]="[curso.id]">Ver detalles</a>
+  </div>
+
+</section>

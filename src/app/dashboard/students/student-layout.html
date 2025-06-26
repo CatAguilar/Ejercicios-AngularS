@@ -1,0 +1,13 @@
+<section style="display: flex; height: 100vh;">
+  <aside style="width: 200px; background: #b4abf5; padding: 1rem;">
+    <h3>Menú Estudiante</h3>
+    <nav>
+      <a routerLink="summary" routerLinkActive="active" style="display: block; margin-bottom: 1rem;">Dashboard</a>
+      <a routerLink="cursos" routerLinkActive="active" style="display: block;">Cursos</a>
+    </nav>
+  </aside>
+
+  <main style="flex: 1; padding: 2rem;">
+    <router-outlet></router-outlet>
+  </main>
+</section>

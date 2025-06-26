@@ -1,0 +1,12 @@
+<h2>Detalle del Curso</h2>
+    <p>ID recibido: {{ id }}</p>
+
+    <div *ngIf="curso">
+      <h3>{{ curso.name }}</h3>
+      <p>{{ curso.description }}</p>
+      <p><strong>Profesor: </strong>{{ curso.teacher }}</p>
+    </div>
+
+    <div *ngIf="!curso">
+      <p>Curso no encontrado.</p>
+    </div>
